@@ -1,0 +1,353 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                # The configuration is inside DatabaseCredentialsProvider
+                driver: pdo_mysql
+                host: placeholder
+                port: placeholder
+                user: placeholder
+                password: placeholder
+                dbname: placeholder
+                server_version: 0.0.1 # This is a placeholder value
+                wrapper_class: App\Shared\Persistence\DBAL\ClientConnectionWrapper
+                mapping_types:
+                    enum: string
+                logging: false
+                profiling: true
+            core:
+                # The configuration is inside DatabaseCredentialsProvider
+                driver: pdo_mysql
+                host: placeholder
+                port: placeholder
+                user: placeholder
+                password: placeholder
+                dbname: placeholder
+                server_version: 0.0.1 # This is a placeholder value
+                wrapper_class: App\Shared\Persistence\DBAL\CoreConnectionWrapper
+                mapping_types:
+                    enum: string
+                logging: false
+                profiling: true
+
+        types:
+            abacus_ktnr_id: App\Accounting\Abacus\Type\AbacusKTNRIdType
+            abacus_ktnr_type_id: App\Accounting\Abacus\Type\AbacusKTNRTypeIdType
+            abacus_internal_ktnr_id: App\Accounting\Abacus\Type\AbacusInternalKTNRIdType
+            article_id: App\SpecialService\SpecialServicePosition\Type\ArticleIdType
+            auth_user_role_id: App\Auth\User\Type\RoleIdType
+            auth_user_role_right_id: App\Auth\User\Type\RoleRightType
+            client_address_contract_id: App\ClientAddress\ClientAddress\Type\ClientAddressContractIdType
+            client_address_allowed_checkin_radius_in_meters: App\ClientAddress\ClientAddress\Type\AllowedCheckinRadiusInMetersType
+            client_address_client_address_duration_id: App\ClientAddress\ClientAddress\Type\ClientAddressDurationIdType
+            client_address_disposition_id: App\ClientAddress\DispositionPlanning\Type\ClientAddressDispositionIdType
+            client_address_disposition_entry_id: App\ClientAddress\DispositionPlanning\Type\ClientAddressDispositionEntryIdType
+            client_address_disposition_planning_id: App\ClientAddress\DispositionPlanning\Type\ClientAddressDispositionPlanningIdType
+            client_address_disposition_type: App\ClientAddress\DispositionPlanning\Type\ClientAddressDispositionTypeType
+            client_address_id: App\ClientAddress\ClientAddress\Type\ClientAddressIdType
+            client_address_proxipen_checkpoint_id: App\ClientAddress\ClientAddress\Type\ProxipenCheckpointIdType
+            client_address_responsibility_id: App\ClientAddress\Responsibility\Type\ClientAddressResponsibilityIdType
+            client_address_responsibility_configuration_id: App\ClientAddress\Responsibility\Type\ClientAddressResponsibilityConfigurationIdType
+            client_id: App\ClientAddress\ClientAddress\Type\ClientIdType
+            compensatable_overtime_cache_entry_id: App\TimeTracking\Overtime\Type\CompensatableOvertimeCacheEntryIdType
+            creditor_invoice_id: App\CreditorAccounting\CreditorInvoice\Type\CreditorInvoiceIdType
+            creditor_invoice_position_id: App\CreditorAccounting\CreditorInvoice\Type\CreditorInvoicePositionIdType
+            creditor_invoice_status: App\CreditorAccounting\CreditorInvoice\Type\CreditorInvoiceStatusType
+            creditor_invoice_type: App\CreditorAccounting\CreditorInvoice\Type\CreditorInvoiceTypeType
+            delivery_id: App\Storage\StorageHistory\Type\DeliveryIdType
+            department_department_id: App\Department\Department\Type\DepartmentIdType
+            district_service_group_id: App\DistrictService\DistrictServiceGroup\Type\DistrictServiceGroupIdType
+            district_service_id: App\DistrictService\DistrictServiceGroup\Type\DistrictServiceIdType
+            district_service_place_id: App\DistrictService\DistrictServiceGroup\Type\DistrictServicePlaceIdType
+            days_of_the_week_set_as_comma_separated_numbers: App\ClientAddress\Specification\Type\DaysOfTheWeekSetAsCommaSeparatedNumbersType
+            email_address: App\Shared\Email\Type\EmailAddressType
+            employee_file_id: App\Employee\DocumentManagement\Type\FileIdType
+            employee_folder_id: App\Employee\DocumentManagement\Type\FolderIdType
+            employee_station_id: App\Employee\Station\Type\StationIdType
+            employee_has_mission_id: App\MissionPlanning\Mission\Type\EmployeeHasMissionIdType
+            employee_id: App\Employee\Employee\Type\EmployeeIdType
+            employee_tour_id: App\Controlling\EmployeeTour\Type\EmployeeTourIdType
+            invoice_id: App\Invoicing\Invoice\Type\InvoiceIdType
+            maximum_weekly_work_time_id: App\TimeTracking\Overtime\Type\MaximumWeeklyWorkTimeIdType
+            mission_id: App\MissionPlanning\Mission\Type\MissionIdType
+            mission_planning_proxipen_checkpoint_check_id: App\MissionPlanning\ProxipenCheckpointCheck\Type\ProxipenCheckpointCheckIdType
+            order_state: App\Storage\StorageOrder\Type\OrderStateType
+            report_report_entry_id: App\Report\ReportEntry\Type\ReportEntryIdType
+            report_report_state_id: App\Report\ReportState\Type\ReportStateIdType
+            report_report_state_buttons_id: App\Report\ReportState\Type\ReportStateButtonIdType
+            salary_id: App\Employee\Salary\Type\SalaryIdType
+            service_id: App\Service\Service\Type\ServiceIdType
+            service_attribute_id: App\Service\Service\Type\ServiceAttributeIdType
+            service_offer_position_id: App\Storage\StorageList\Type\ServiceOfferPositionIdType
+            service_service_activity_type_id: App\Service\Service\Type\ActivityTypeIdType
+            service_situation: App\Service\Service\Type\ServiceSituationType
+            shared_checklist_checklist_id: App\Shared\Checklist\Type\ChecklistIdType
+            shared_checklist_checklist_item_id: App\Shared\Checklist\Type\ChecklistItemIdType
+            shared_checklist_checklist_template_id: App\Shared\Checklist\Type\ChecklistTemplateIdType
+            shared_checklist_checklist_template_item_id: App\Shared\Checklist\Type\ChecklistTemplateItemIdType
+            shared_checklist_checklist_template_state_machine_state_id: App\Shared\Checklist\Type\ChecklistTemplateStateMachineStateIdType
+            skill_id: App\Skill\Skill\Type\SkillIdType
+            special_service_position_group_id: App\SpecialService\SpecialServicePosition\Type\SpecialServicePositionGroupIdType
+            specification_id: App\ClientAddress\Specification\Type\SpecificationIdType
+            specification_occurrence_id: App\Specification\Occurrence\Type\SpecificationOccurrenceIdType
+            specification_work_type_id: App\ClientAddress\Specification\Type\SpecificationWorkTypeIdType
+            storage_action: App\Storage\StorageHistory\Type\StorageActionType
+            storage_history_id: App\Storage\StorageHistory\Type\StorageHistoryIdType
+            storage_id: App\Storage\StorageHistory\Type\StorageIdType
+            storage_order_id: App\Storage\StorageOrder\Type\StorageOrderIdType
+            storage_order_position_id: App\Storage\StorageOrder\Type\StorageOrderPositionIdType
+            third_party_invoice_id: App\Service\ThirdPartyInvoice\Type\ThirdPartyInvoiceIdType
+            time_tracking_proxipen_timesheet_entry_id: App\TimeTracking\Proxipen\Type\TimesheetEntryIdType
+            timesheet_correction_id: App\TimeTracking\Proxipen\Type\TimesheetCorrectionIdType
+            timestamp_date_time_immutable: App\Shared\Clock\Type\TimestampDateTimeImmutableType
+            timestamp_where_zero_is_null_date_time_immutable: App\Shared\Clock\Type\TimestampWhereZeroIsNullDateTimeImmutableType
+            tour_configuration_id: App\Controlling\EmployeeTour\Type\TourConfigurationIdType
+            user_geolocation_id: App\TimeTracking\UserGeolocation\Type\UserGeolocationIdType
+            user_id: App\Auth\User\Type\UserIdType
+            weekday: App\Controlling\EmployeeTour\Type\WeekdayType
+            work_type_id: App\ClientAddress\WorkType\Type\WorkTypeIdType
+            work_type_price_list_id: App\ClientAddress\WorkType\Type\WorkTypePriceListIdType
+            work_hour_group_id: App\Employee\Salary\Type\WorkHourGroupIdType
+            work_hour_configuration_id: App\Employee\Salary\Type\WorkHourConfigurationIdType
+
+    orm:
+        auto_generate_proxy_classes: true
+        enable_lazy_ghost_objects: true
+        controller_resolver:
+            auto_mapping: false
+
+        entity_managers:
+            default:
+                validate_xml_mapping: true
+                auto_mapping: true
+                report_fields_where_declared: true
+                naming_strategy: App\Shared\Persistence\NamingStrategy\CedrisNamingStrategy
+
+                connection: default
+                mappings:
+                  App\Accounting\Abacus:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Accounting/Abacus/Entity'
+                    prefix: 'App\Accounting\Abacus\Entity'
+                    alias: App
+                  App\Auth\ActiveUserStatistics:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Auth/ActiveUserStatistics/Entity'
+                    prefix: 'App\Auth\ActiveUserStatistics\Entity'
+                    alias: App
+                  App\Auth\User:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Auth/User/Entity'
+                    prefix: 'App\Auth\User\Entity'
+                    alias: App
+                  GesdinetJWTRefreshTokenBundle:
+                    type: xml
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/vendor/gesdinet/jwt-refresh-token-bundle/Resources/config/doctrine'
+                    prefix: 'Gesdinet\JWTRefreshTokenBundle\Entity'
+                    alias: GesdinetJWTRefreshTokenBundle
+                  App\ClientAddress\Checklist:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/Checklist/Entity'
+                    prefix: 'App\ClientAddress\Checklist\Entity'
+                    alias: App
+                  App\ClientAddress\ClientAddress:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/ClientAddress/Entity'
+                    prefix: 'App\ClientAddress\ClientAddress\Entity'
+                    alias: App
+                  App\ClientAddress\Responsibility:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/Responsibility/Entity'
+                    prefix: 'App\ClientAddress\Responsibility\Entity'
+                    alias: App
+                  App\ClientAddress\Specification:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/Specification/Entity'
+                    prefix: 'App\ClientAddress\Specification\Entity'
+                    alias: App
+                  App\ClientAddress\WorkType:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/WorkType/Entity'
+                    prefix: 'App\ClientAddress\WorkType\Entity'
+                  App\Controlling\EmployeeTour:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Controlling/EmployeeTour/Entity'
+                    prefix: 'App\Controlling\EmployeeTour\Entity'
+                    alias: App
+                  App\CreditorAccounting\CreditorInvoice:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/CreditorAccounting/CreditorInvoice/Entity'
+                    prefix: 'App\CreditorAccounting\CreditorInvoice\Entity'
+                    alias: App
+                  App\ClientAddress\DispositionPlanning:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/ClientAddress/DispositionPlanning/Entity'
+                    prefix: 'App\ClientAddress\DispositionPlanning'
+                    alias: App
+                  App\Department\Department:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Department/Department/Entity'
+                    prefix: 'App\Department\Department'
+                  App\DistrictService\DistrictServiceGroup:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/DistrictService/DistrictServiceGroup/Entity'
+                    prefix: 'App\DistrictService\DistrictServiceGroup\Entity'
+                    alias: App
+                  App\Employee\Employee:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Employee/Employee/Entity'
+                    prefix: 'App\Employee\Employee\Entity'
+                    alias: App
+                  App\Employee\Salary:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Employee/Salary/Entity'
+                    prefix: 'App\Employee\Salary\Entity'
+                    alias: App
+                  App\Employee\DocumentManagement:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Employee/DocumentManagement/Entity'
+                    prefix: 'App\Employee\DocumentManagement\Entity'
+                    alias: App
+                  App\Employee\Station:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Employee/Station/Entity'
+                    prefix: 'App\Employee\Station\Entity'
+                    alias: App
+                  App\MissionPlanning\Mission:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/MissionPlanning/Mission/Entity'
+                    prefix: 'App\MissionPlanning\Mission\Entity'
+                    alias: App
+                  App\MissionPlanning\ProxipenCheckpointCheck:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/MissionPlanning/ProxipenCheckpointCheck/Entity'
+                    prefix: 'App\MissionPlanning\ProxipenCheckpointCheck\Entity'
+                    alias: App
+                  App\Shared\Checklist:
+                      type: attribute
+                      is_bundle: false
+                      dir: '%kernel.project_dir%/src/Shared/Checklist/Entity'
+                      prefix: 'App\Shared\Checklist\Entity'
+                      alias: App
+                  App\Shared\WebServices:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Shared/WebServices/Entity'
+                    prefix: 'App\Shared\WebServices\Entity'
+                    alias: App
+                  App\Report\ReportEntry:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Report/ReportEntry/Entity'
+                    prefix: 'App\Report\ReportEntry'
+                  App\Report\ReportState:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Report/ReportState/Entity'
+                    prefix: 'App\Report\ReportState'
+                  App\Service\Service:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Service/Service/Entity'
+                    prefix: 'App\Service\Service\Entity'
+                    alias: App
+                  App\Skill\Skill:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Skill/Skill/Entity'
+                    prefix: 'App\Skill\Skill\Entity'
+                    alias: App
+                  App\DocumentManagement:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/DocumentManagement/Entity'
+                    prefix: 'App\DocumentManagement\Entity'
+                    alias: App
+                  App\Specification\Occurrence:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Specification/Occurrence/Entity'
+                    prefix: 'App\Specification\Occurrence\Entity'
+                    alias: App
+                  App\SpecialService\SpecialServicePosition:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/SpecialService/SpecialServicePosition/Entity'
+                    prefix: 'App\SpecialService\SpecialServicePosition\Entity'
+                    alias: App
+                  App\Storage\StorageHistory:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Storage/StorageHistory/Entity'
+                    prefix: 'App\Storage\StorageHistory\Entity'
+                    alias: App
+                  App\Storage\StorageOrder:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Storage/StorageOrder/Entity'
+                    prefix: 'App\Storage\StorageOrder\Entity'
+                    alias: App
+                  App\TimeTracking\Overtime:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/TimeTracking/Overtime/Entity'
+                    prefix: 'App\TimeTracking\Overtime\Entity'
+                    alias: App
+                  App\Service\ThirdPartyInvoice:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/Service/ThirdPartyInvoice/Entity'
+                    prefix: 'App\Service\ThirdPartyInvoice\Entity'
+                    alias: App
+                  App\TimeTracking\Proxipen:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/TimeTracking/Proxipen/Entity'
+                    prefix: 'App\TimeTracking\Proxipen\Entity'
+                    alias: App
+                  App\TimeTracking\UserGeolocation:
+                    type: attribute
+                    is_bundle: false
+                    dir: '%kernel.project_dir%/src/TimeTracking/UserGeolocation/Entity'
+                    prefix: 'App\TimeTracking\UserGeolocation\Entity'
+                    alias: App
+
+when@test:
+    doctrine:
+        dbal:
+            # "TEST_TOKEN" is typically set by ParaTest
+            dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+
+when@prod:
+    framework:
+        cache:
+            pools:
+                doctrine.result_cache_pool:
+                    adapter: cache.app
+                doctrine.system_cache_pool:
+                    adapter: cache.system
+    doctrine:
+        dbal:
+            logging: false
+            profiling: false
