@@ -1,0 +1,17 @@
+{% extends 'Shared/Layout/app.html.twig' %}
+
+{# @var App\Home\Entity\User[] users #}
+
+{% block page_title %}Home{% endblock %}
+
+{% block content %}
+    {% embed 'Shared/Wrapper/_page.html.twig' %}
+        {% block header %}
+            <h1>Users</h1>
+        {% endblock %}
+
+        {% block body %}
+            {% include 'Home/home.html.twig' %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

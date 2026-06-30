@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% block page_title %}Calorie Tracker{% endblock %}{% endblock %}
+
+{% block body %}
+    {% include 'Shared/Components/_header.html.twig' %}
+
+    <main>
+        {% include 'Shared/Components/_flash_messages.html.twig' %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'Shared/Components/_footer.html.twig' %}
+{% endblock %}

@@ -14,10 +14,10 @@ class HomeController extends AbstractController {
     ) {
     }
 
-    #[Route('/')]
+    #[Route('/', name: 'app_home')]
     public function index(): Response
     {
-        return $this->render('Home/index.html.twig', [
+        return $this->render('Home/homeWrapper.html.twig', [
             'users' => $this->userRepository->findAll(),
         ]);
     }
